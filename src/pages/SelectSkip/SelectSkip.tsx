@@ -1,7 +1,7 @@
 import { Grid2, Typography } from "@mui/material"
 import { memo } from "react"
 
-const SkipSelect = memo(() => {
+const SelectSkip = memo(() => {
   return (
     <Grid2 container flexDirection={'column'} size={'grow'} spacing={2}>
       <Grid2 display={'flex'} justifyContent={'center'}>
@@ -14,4 +14,4 @@ const SkipSelect = memo(() => {
   )
 })
 
-export default SkipSelect
+export default SelectSkip

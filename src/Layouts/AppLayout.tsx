@@ -7,7 +7,7 @@ import CustomConnector from "../components/CustomConnector";
 const steps = [
   { title: 'Postcode', icon: <LocationOnOutlined />, path: 'postcode' },
   { title: 'Waste Type', icon: <DeleteOutline />, path: 'waste-type' },
-  { title: 'Skip Select', icon: <LocalShippingOutlined />, path: 'skip-select' },
+  { title: 'Select Skip', icon: <LocalShippingOutlined />, path: 'select-skip' },
   { title: 'Permit Check', icon: <ShieldOutlined />, path: 'permit-check' },
   { title: 'Choose Date', icon: <CalendarTodayOutlined />, path: 'choose-date' },
   { title: 'Payment', icon: <CreditCardOutlined />, path: 'payment' },
