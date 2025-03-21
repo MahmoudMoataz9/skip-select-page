@@ -4,8 +4,8 @@ body {
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 4px;
+  height: 4px;
 }
 
 ::-webkit-scrollbar-track {
@@ -13,10 +13,10 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #79533a;
+  background: rgb(63, 63, 63);
   border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #442f21;
+  background: rgb(44, 44, 44);
 }
