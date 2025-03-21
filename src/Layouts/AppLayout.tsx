@@ -1,5 +1,5 @@
-import { CalendarTodayOutlined, Check, CreditCardOutlined, DeleteOutline, LocalShippingOutlined, LocationOnOutlined, ShieldOutlined } from "@mui/icons-material";
-import { Box, Button, Grid2, Step, StepConnector, StepIcon, StepLabel, Stepper, styled, useTheme } from "@mui/material"
+import { CalendarTodayOutlined, CreditCardOutlined, DeleteOutline, LocalShippingOutlined, LocationOnOutlined, ShieldOutlined } from "@mui/icons-material";
+import { Box, Grid2, Step, StepLabel, Stepper, useTheme } from "@mui/material"
 import { cloneElement, useCallback, useEffect, useState } from "react"
 import { Outlet, useNavigate } from "react-router-dom"
 import CustomConnector from "../components/CustomConnector";
@@ -7,7 +7,7 @@ import CustomConnector from "../components/CustomConnector";
 const steps = [
   { title: 'Postcode', icon: <LocationOnOutlined />, path: 'postcode' },
   { title: 'Waste Type', icon: <DeleteOutline />, path: 'waste-type' },
-  { title: 'Skip Select', icon: <LocalShippingOutlined />, path: 'skip-select' },
+  { title: 'Select Skip', icon: <LocalShippingOutlined />, path: 'select-skip' },
   { title: 'Permit Check', icon: <ShieldOutlined />, path: 'permit-check' },
   { title: 'Choose Date', icon: <CalendarTodayOutlined />, path: 'choose-date' },
   { title: 'Payment', icon: <CreditCardOutlined />, path: 'payment' },
@@ -32,9 +32,9 @@ const AppLayout = () => {
   return (
     <Grid2 container size={'grow'} minHeight={'100vh'} display={'flex'} justifyContent={'center'} bgcolor={theme.palette.background.default} sx={{ color: theme.palette.text.primary }}>
 
-      <Grid2 container size={'grow'} flexDirection={'column'} maxWidth={1400}>
+      <Grid2 container size={'grow'} flexDirection={'column'} maxWidth={1400} spacing={4} paddingTop={4}>
 
-        <Grid2 paddingY={4} width={'100%'} sx={{ overflowX: 'auto' }}>
+        <Grid2 width={'100%'} sx={{ overflowX: 'auto' }}>
           <Stepper activeStep={activeStep} connector={<CustomConnector />}>
             {steps.map((step, index) => {
               

@@ -1,7 +1,13 @@
 import { Grid2, Typography } from "@mui/material"
-import { memo } from "react"
+import { memo, useCallback, useEffect } from "react"
+import skipsController from "../../controllers/skipsController"
 
-const SkipSelect = memo(() => {
+const SelectSkip = memo(() => {
+
+  useEffect(() => { fetchSkips() }, [])
+
+  const fetchSkips = useCallback(() => skipsController.fetchAll().then(skips => console.log(skips)), [])
+
   return (
     <Grid2 container flexDirection={'column'} size={'grow'} spacing={2}>
       <Grid2 display={'flex'} justifyContent={'center'}>
@@ -14,4 +20,4 @@ const SkipSelect = memo(() => {
   )
 })
 
-export default SkipSelect
+export default SelectSkip

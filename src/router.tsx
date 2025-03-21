@@ -1,12 +1,11 @@
 import { createBrowserRouter, Navigate, RouteObject } from "react-router-dom";
 import AppLayout from "./Layouts/AppLayout";
-import Home from "./pages/Home/Home";
-import SkipSelect from "./pages/SkipSelect/SkipSelect";
 import Postcode from "./pages/Postcode/Postcode";
 import WasteType from "./pages/WasteType/WasteType";
 import PermitCheck from "./pages/PermitCheck/PermitCheck";
 import ChooseDate from "./pages/ChooseDate/ChooseDate";
 import Payment from "./pages/Payment/Payment";
+import SelectSkip from "./pages/SelectSkip/SelectSkip";
 
 export const routes: RouteObject[] = [
     {
@@ -14,7 +13,7 @@ export const routes: RouteObject[] = [
         element: <AppLayout />,
         children: [
             {
-                path: '', element: <Navigate to={'/skip-select'} />
+                path: '', element: <Navigate to={'/select-skip'} />
             },
             {
                 path: 'postcode', element: <Postcode />
@@ -23,7 +22,7 @@ export const routes: RouteObject[] = [
                 path: 'waste-type', element: <WasteType />
             },
             {
-                path: 'skip-select', element: <SkipSelect />
+                path: 'select-skip', element: <SelectSkip />
             },
             {
                 path: 'permit-check', element: <PermitCheck />
