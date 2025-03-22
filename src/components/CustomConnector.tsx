@@ -7,13 +7,13 @@ const CustomConnector = styled(StepConnector)(({ theme }) => ({
         transition: "background-color 0.3s ease-in-out",
     },
     "&.Mui-completed .MuiStepConnector-line": {
-        backgroundColor: theme.palette.primary.main, // Completed steps turn green
+        backgroundColor: theme.palette.primary.main,
     },
     "&.Mui-active .MuiStepConnector-line": {
-        backgroundColor: "grey", // Active step turns blue
+        backgroundColor: "grey",
     },
     "&:not(.Mui-active):not(.Mui-completed) .MuiStepConnector-line": {
-        backgroundColor: "grey", // Default gray for incomplete steps
+        backgroundColor: "grey",
     },
 }));
 
