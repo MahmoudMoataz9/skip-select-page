@@ -30,14 +30,14 @@ const AppLayout = () => {
   }, [])
 
   return (
-    <Grid2 container size={'grow'} minHeight={'100vh'} display={'flex'} justifyContent={'center'} bgcolor={theme.palette.background.default} sx={{ color: theme.palette.text.primary }}>
+    <Grid2 container size={'grow'} minHeight={'100vh'} paddingBottom={24} display={'flex'} justifyContent={'center'} bgcolor={theme.palette.background.default} sx={{ color: theme.palette.text.primary }}>
 
-      <Grid2 container size={'grow'} flexDirection={'column'} maxWidth={1400} spacing={4} paddingTop={4}>
+      <Grid2 container size={'grow'} flexDirection={'column'} maxWidth={1300} paddingX={4} spacing={4} paddingTop={4}>
 
         <Grid2 width={'100%'} sx={{ overflowX: 'auto' }}>
           <Stepper activeStep={activeStep} connector={<CustomConnector />}>
             {steps.map((step, index) => {
-              
+
               const isActive = activeStep >= index;
 
               return (
@@ -47,13 +47,13 @@ const AppLayout = () => {
                     sx={{
                       "& .MuiStepLabel-label": {
                         textWrap: 'nowrap',
-                        color: isActive ? theme.palette.text.primary : "gray",
+                        color: isActive ? theme.palette.text.primary : "grey",
                         fontSize: "1.2rem",
                         transition: "all 0.3s ease-in-out",
                       },
                       cursor: isActive ? "pointer" : "not-allowed"
                     }} icon={
-                      <Box sx={{ color: isActive ? theme.palette.primary.main : "gray" }}>
+                      <Box sx={{ color: isActive ? theme.palette.primary.main : "grey" }}>
                         {cloneElement(step.icon, { fontSize: "large" })}
                       </Box>
                     }>{step.title}</StepLabel>
@@ -64,7 +64,7 @@ const AppLayout = () => {
         </Grid2>
 
         <Grid2>
-          <Outlet />
+          <Outlet context={{ activeStep, setActiveStep }} />
         </Grid2>
 
       </Grid2>

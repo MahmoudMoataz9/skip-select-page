@@ -1,11 +1,11 @@
 import { createBrowserRouter, Navigate, RouteObject } from "react-router-dom";
-import AppLayout from "./Layouts/AppLayout";
 import Postcode from "./pages/Postcode/Postcode";
 import WasteType from "./pages/WasteType/WasteType";
 import PermitCheck from "./pages/PermitCheck/PermitCheck";
 import ChooseDate from "./pages/ChooseDate/ChooseDate";
 import Payment from "./pages/Payment/Payment";
 import SelectSkip from "./pages/SelectSkip/SelectSkip";
+import AppLayout from "./layouts/AppLayout";
 
 export const routes: RouteObject[] = [
     {
