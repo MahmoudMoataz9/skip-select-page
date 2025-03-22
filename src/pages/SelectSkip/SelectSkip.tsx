@@ -53,7 +53,7 @@ const SelectSkip = memo(() => {
       </Grid2>
 
       <Grid2 container spacing={4} paddingTop={2}>
-        <Grid2 container>
+        <Grid2 container size={'grow'}>
           {!skips ? [0, 0, 0].map((_, i) => <Grid2 key={i} size={{ xs: 12, sm: 6, md: 4 }}><SkipCardSkeleton /></Grid2>) : skips.length === 0 ? <Typography> No Skips to Show </Typography> :
             skips.map((s, i) =>
               <Grid2 key={i} size={{ xs: 12, sm: 6, md: 4 }}>
